@@ -42,7 +42,7 @@ def add_user(username, password):
         user_db[username] = {"password_hash": password_hash, "last_password_change_date": last_change_date}
         return "User added successfully."
     else:
-        return "Password does not meet complexity standards."
+        return "Password does not meet complexity standards. User not added."
 
 def authenticate_user(username, password):
     user_data = user_db.get(username)
